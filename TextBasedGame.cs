@@ -1,9 +1,17 @@
-﻿using System;
+/*
+This is a small gane I built when I was first learning C# in school.
+I never went back to it to update its ability to use OOP or anything
+but it still works nice and is playable.
+
+Enjoy!
+*/
+
+using System;
 using System.Threading;
 
-namespace Game_FInal
+namespace Game_Final
 {
-    class Program
+    class TextBasedGame
     {
         static void Main()
         {

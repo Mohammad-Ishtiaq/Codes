@@ -1,0 +1,38 @@
+/*
+Maximum Number of Words Found in Sentences
+
+A sentence is a list of words that are separated by a single space with no leading or trailing spaces.
+
+You are given an array of strings sentences, where each sentences[i] represents a single sentence.
+
+Return the maximum number of words that appear in a single sentence.
+
+https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/
+*/
+
+public class Solution {
+    public int MostWordsFound(string[] sentences) {
+        int answer = 0;
+        char space = ' ';
+        List<int> compare = new List<int>();
+        
+        for(int i = 0; i < sentences.Length; i++){
+            
+            answer = 0;
+            
+            foreach(char j in sentences[i]){
+                if(space == j){
+                    answer++;
+                }
+            }
+            
+            compare.Add(answer+1);
+            
+        }
+        
+        compare.Sort();
+        
+        return compare[compare.Count-1];
+        
+    }
+}
